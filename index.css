@@ -1,0 +1,49 @@
+html {
+    background-color: #202020;
+    font-family: monospace;
+    font-size: x-large;
+    color: aliceblue;
+}
+
+#central {
+    position: absolute;
+    top: 3em;
+    margin: 0.5em 2em;
+}
+
+#dr {
+}
+
+a {
+    text-decoration: none;
+    color: darkgrey;
+}
+a:hover {
+    color: lightgrey;
+}
+a.DASEIN:hover {
+    color: #1e1e1e;
+}
+
+a:active {}
+a:focus {}
+a:visited {}
+
+h1 {
+    color: #acacac;
+    margin-bottom: 0px;
+}
+
+h2 {
+    position: relative;
+    margin-left: 20px;
+}
+
+.subtitle {
+    margin-left: 3px;
+    color: #b2b2b2;
+}
+
+.subtitle:hover {
+    color: #777777;
+}
