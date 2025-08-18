@@ -73,3 +73,11 @@ function renderProjects() {
     // }
 
 renderProjects();
+
+// Simple name switch based on URL parameter
+if (new URLSearchParams(location.search).get('a') === '2') {
+    document.getElementById('name').textContent = 'Alice Vaillant';
+    const email = document.querySelector('a.subtitle');
+    email.textContent = 'alice@vaillant.ai';
+    email.href = 'mailto:alice@vaillant.ai';
+}
