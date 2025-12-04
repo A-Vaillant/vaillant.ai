@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Resume - Aleister Vaillant</title>
+    <meta name="description" content="Resume for Aleister Vaillant">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="resume.css">
+  </head>
+  <body>
+    <div class="crt">
+      <div class="scan-line"></div>
+      <div class="scan-line" style="animation-delay: -2s;"></div>
+      <div class="scan-line" style="animation-delay: -4s;"></div>
+      <div id="curved-screen">
+        <div id="central">
+          <div class="back-link">
+            <a href="index.html">← Back to Home</a>
+          </div>
+          <div class="paper-content">
+          <div class="resume-header">
+            <h1 id="resume-name">Loading...</h1>
+            <div class="contact-info">
+              <a id="resume-email" href="mailto:"></a>
+              <span class="separator">|</span>
+              <span id="resume-location"></span>
+              <span class="separator">|</span>
+              <a id="resume-github" href="" target="_blank">GitHub</a>
+              <span class="separator">|</span>
+              <a id="resume-linkedin" href="" target="_blank">LinkedIn</a>
+            </div>
+          </div>
+
+          <section id="summary" class="resume-section">
+            <h2 class="section-title">$ cat summary.txt</h2>
+            <p class="summary-text"></p>
+          </section>
+
+          <section id="education" class="resume-section">
+            <h2 class="section-title">$ ls education/</h2>
+            <div class="section-content"></div>
+          </section>
+
+          <section id="experience" class="resume-section">
+            <h2 class="section-title">$ ls experience/</h2>
+            <div class="section-content"></div>
+          </section>
+
+          <section id="projects" class="resume-section">
+            <h2 class="section-title">$ ls projects/</h2>
+            <div class="section-content"></div>
+          </section>
+
+          <section id="skills" class="resume-section">
+            <h2 class="section-title">$ cat skills.yml</h2>
+            <div class="section-content skills-grid"></div>
+          </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="application/json" id="resume-data">
+{
+  "basics": {
+    "name": "Aleister Vaillant",
+    "label": "ML Engineer | LLM Systems | Philosophy + Math Background",
+    "email": "aleister@vaillant.ai",
+    "phone": "(408) 439-7551",
+    "summary": "I build systems that work: asset tracking for 10,000+ units, QA automation that cut manual verification by 60%, test infrastructure for hardware validation. Background in ML, math, and philosophy. Currently focused on LLM applications—retrieval, agents, structured outputs.",
+    "location": {
+      "city": "New York",
+      "region": "NY",
+      "countryCode": "US"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "alvaillant",
+        "url": "https://www.linkedin.com/in/alvaillant/"
+      },
+      {
+        "network": "GitHub",
+        "username": "A-Vaillant",
+        "url": "https://github.com/A-Vaillant"
+      },
+      {
+        "network": "Website",
+        "url": "https://vaillant.ai"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "StoryverseNYC",
+      "position": "AI Consultant",
+      "startDate": "2025-07",
+      "endDate": null,
+      "summary": "Building interactive AI systems for GÖSPEL, an immersive theater production.",
+      "highlights": [
+        "LLM integration for real-time audience interaction",
+        "Creative technology at the intersection of theater and ML"
+      ]
+    },
+    {
+      "name": "X, the moonshot factory",
+      "position": "Firmware Test Engineer",
+      "startDate": "2023-07",
+      "endDate": "2023-11",
+      "summary": "Python test infrastructure for prototype GPS/sensor hardware validation. Transitioned here from ops after building relationships with the firmware team.",
+      "highlights": [
+        "Built flash memory reliability test framework, reducing manual verification overhead by 60%",
+        "Ran BLE connectivity studies and analysis for Product team",
+        "Created proof-of-concept applications to derisk hardware approaches"
+      ]
+    },
+    {
+      "name": "X, the moonshot factory (Chorus)",
+      "position": "Operational Data Analyst",
+      "startDate": "2021-03",
+      "endDate": "2023-06",
+      "summary": "Started in operations, grew into inventory management and hardware QA as the supply-chain visibility project scaled.",
+      "highlights": [
+        "Built asset management system tracking state, location, and test results for 10,000+ units",
+        "Automated QA data analysis: Python pipeline comparing sensor measurements against ground truth",
+        "Integrated asset system into relational database via ETL pipeline",
+        "Ran quality control experiments on new sensing hardware"
+      ]
+    },
+    {
+      "name": "Waymo",
+      "position": "Software Quality Operations Associate",
+      "startDate": "2019-01",
+      "endDate": "2021-01",
+      "summary": "Learned full system architecture of self-driving car to diagnose behavioral faults under time pressure. Hardware issue? Misclassified object? Hallucinated object? Figured it out.",
+      "highlights": [
+        "Built SQL-backed dashboards extending team's diagnostic toolkit",
+        "Created Bash/Python tools to increase triage efficiency",
+        "Added features to internal viewing tools (C++)—hotkeys, probability displays along behavior paths"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "NYU Tandon School of Engineering",
+      "area": "Machine Learning & Artificial Intelligence",
+      "studyType": "Master of Science",
+      "startDate": "2023",
+      "endDate": "2025",
+      "courses": [
+        "Deep Learning",
+        "Classical Machine Learning",
+        "Reinforcement Learning",
+        "Digital Forensics & Networking"
+      ]
+    },
+    {
+      "institution": "UC Santa Barbara",
+      "area": "Philosophy & Mathematics",
+      "studyType": "BA Philosophy, BS Mathematics",
+      "startDate": "2010",
+      "endDate": "2014",
+      "gpa": "3.5",
+      "courses": [
+        "Epistemology",
+        "Value Theory",
+        "Foundations of Mathematics",
+        "First-Order Logic",
+        "Abstract Algebra",
+        "Topology",
+        "Graph Theory",
+        "Linear Algebra"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Languages",
+      "level": "Professional",
+      "keywords": [
+        "Python",
+        "SQL",
+        "Bash",
+        "C++"
+      ]
+    },
+    {
+      "name": "ML/AI",
+      "level": "Professional",
+      "keywords": [
+        "PyTorch",
+        "TensorFlow",
+        "DSPy",
+        "LLM APIs",
+        "RAG",
+        "Structured Outputs",
+        "Computer Vision"
+      ]
+    },
+    {
+      "name": "Infrastructure",
+      "level": "Professional",
+      "keywords": [
+        "ETL",
+        "GCP",
+        "AWS",
+        "Linux/FreeBSD",
+        "Embedded Systems"
+      ]
+    },
+    {
+      "name": "Frameworks",
+      "level": "Professional",
+      "keywords": [
+        "Flask",
+        "Django",
+        "Pandas",
+        "Pydantic"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Petrock",
+      "description": "Personality-driven multimodal AI system on resource-constrained hardware (Raspberry Pi).",
+      "highlights": [
+        "Real-time computer vision inference on edge device",
+        "LLM integration for personality and interaction"
+      ],
+      "keywords": [
+        "Computer Vision",
+        "LLM",
+        "Raspberry Pi",
+        "Edge AI"
+      ],
+      "url": "https://github.com/A-Vaillant/petrock"
+    },
+    {
+      "name": "Factorio Working Group",
+      "description": "Applied convolutional deep learning to procedurally generate factories for the game Factorio.",
+      "highlights": [
+        "Explored whether neural networks could learn implicit design patterns of efficient factory layouts"
+      ],
+      "keywords": [
+        "PyTorch",
+        "CNNs",
+        "Procedural Generation"
+      ]
+    },
+    {
+      "name": "Dance Dance Transformation",
+      "description": "System to generate DDR stepfiles from input audio tracks.",
+      "highlights": [
+        "Signal processing to detect beats and musical structure",
+        "Pattern generation matching difficulty curves and playability constraints"
+      ],
+      "keywords": [
+        "Python",
+        "Audio Processing",
+        "Procedural Generation"
+      ]
+    }
+  ],
+  "publications": [
+    {
+      "name": "Compatible Models",
+      "publisher": "lez out july zine",
+      "releaseDate": "2024",
+      "summary": "Science fiction: two robots with incompatible architectures reverse-engineer each other to create hybrid offspring. Technical vocabulary integrated into emotional arc."
+    },
+    {
+      "name": "Incursion Report",
+      "publisher": "transsexual examiner zine",
+      "summary": "Political satire concerning a Cuomo-adjacent secret society. Limited print distribution."
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Native"
+    },
+    {
+      "language": "Spanish",
+      "fluency": "Reading proficiency"
+    }
+  ]
+}
+    </script>
+    <script src="resume.js"></script>
+  </body>
+</html>

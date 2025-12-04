@@ -1,0 +1,81 @@
+name: Aleister Vaillant
+email: aleister@vaillant.ai
+location: New York, NY
+linkedin: https://www.linkedin.com/in/alvaillant/
+github: https://github.com/A-Vaillant
+
+summary: |
+  Software engineer and researcher with expertise in machine learning,
+  systems programming, and full-stack development.
+
+education:
+  - institution: New York University
+    degree: BS in Computer Science
+    graduation: 2025
+    gpa: 3.8
+    relevant_coursework:
+      - Machine Learning
+      - Deep Learning
+      - Artificial Intelligence
+      - Operating Systems
+      - Computer Networks
+
+experience:
+  - title: Software Engineering Intern
+    company: Example Corp
+    location: Remote
+    start_date: June 2024
+    end_date: August 2024
+    achievements:
+      - Built full-stack web applications using React and Node.js
+      - Implemented CI/CD pipelines reducing deployment time by 40%
+      - Collaborated with cross-functional teams on feature development
+
+projects:
+  - name: factorio-working-group-one
+    description: Investigation into application of CNNs for automating factory creation in Factorio
+    technologies:
+      - Python
+      - TensorFlow
+      - Computer Vision
+    link: https://github.com/A-Vaillant/factorio-working-group-1
+
+  - name: negative-qwop
+    description: Reinforcement learning approach to solving backwards movement in QWOP
+    technologies:
+      - Python
+      - Reinforcement Learning
+      - OpenAI Gym
+
+  - name: petrock
+    description: Raspberry Pi-based visual LLM chatbot with camera integration
+    technologies:
+      - Python
+      - Large Language Models
+      - Raspberry Pi
+      - Computer Vision
+    link: https://github.com/A-Vaillant/petrock
+
+skills:
+  languages:
+    - Python
+    - JavaScript/TypeScript
+    - C/C++
+    - Java
+    - Go
+    - Rust
+
+  frameworks:
+    - React
+    - Node.js
+    - TensorFlow
+    - PyTorch
+    - Flask
+    - Express
+
+  tools:
+    - Git
+    - Docker
+    - Linux
+    - AWS
+    - CI/CD
