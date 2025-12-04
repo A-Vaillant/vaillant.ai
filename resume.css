@@ -1,0 +1,237 @@
+/* Override CRT for scrolling */
+.crt {
+  height: auto;
+  min-height: 100vh;
+}
+
+#curved-screen {
+  min-height: auto;
+}
+
+.resume-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid var(--neon-pink);
+}
+
+#resume-name {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--neon-pink);
+  text-shadow: 0 0 10px var(--neon-pink);
+}
+
+.contact-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  color: var(--neon-blue);
+  font-size: 0.95rem;
+}
+
+.contact-info a {
+  color: var(--neon-blue);
+  text-decoration: none;
+  text-shadow: 0 0 5px var(--neon-blue);
+  transition: all 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: var(--neon-pink);
+  text-shadow: 0 0 10px var(--neon-pink);
+}
+
+.separator {
+  opacity: 0.5;
+}
+
+.back-link {
+  margin-bottom: 2rem;
+}
+
+.back-link a {
+  color: var(--text);
+  text-decoration: none;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.back-link a:hover {
+  opacity: 1;
+  color: var(--neon-blue);
+  text-shadow: 0 0 5px var(--neon-blue);
+}
+
+.resume-section {
+  margin-bottom: 2.5rem;
+}
+
+.section-title {
+  color: var(--neon-pink);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 5px var(--neon-pink);
+  font-family: 'Courier New', monospace;
+}
+
+.section-content {
+  margin-left: 1rem;
+  border-left: 2px solid var(--neon-blue);
+  padding-left: 1.5rem;
+}
+
+.summary-text {
+  line-height: 1.8;
+  opacity: 0.9;
+  margin-left: 1rem;
+}
+
+.edu-item,
+.exp-item,
+.project-item {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 113, 206, 0.2);
+}
+
+.edu-item:last-child,
+.exp-item:last-child,
+.project-item:last-child {
+  border-bottom: none;
+}
+
+.item-header {
+  margin-bottom: 0.5rem;
+}
+
+.item-title {
+  color: var(--neon-blue);
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-shadow: 0 0 5px var(--neon-blue);
+}
+
+.item-subtitle {
+  color: var(--text);
+  opacity: 0.8;
+  margin-top: 0.25rem;
+}
+
+.item-date {
+  color: var(--neon-pink);
+  opacity: 0.7;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+.achievements,
+.technologies {
+  margin-top: 0.75rem;
+  list-style: none;
+  padding: 0;
+}
+
+.achievements li,
+.technologies li {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+  opacity: 0.9;
+}
+
+.achievements li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--neon-pink);
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.technologies li {
+  padding: 0.25rem 0.75rem;
+  background: rgba(1, 205, 254, 0.1);
+  border: 1px solid var(--neon-blue);
+  border-radius: 3px;
+  font-size: 0.85rem;
+  margin-bottom: 0;
+}
+
+.technologies li::before {
+  content: none;
+}
+
+.project-link {
+  color: var(--neon-blue);
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  display: inline-block;
+}
+
+.project-link:hover {
+  text-shadow: 0 0 10px var(--neon-blue);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-category {
+  background: rgba(255, 113, 206, 0.05);
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 113, 206, 0.2);
+}
+
+.skill-category h3 {
+  color: var(--neon-blue);
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  text-shadow: 0 0 5px var(--neon-blue);
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.skill-list li {
+  background: rgba(1, 205, 254, 0.1);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(1, 205, 254, 0.3);
+}
+
+@media (max-width: 600px) {
+  #resume-name {
+    font-size: 2rem;
+  }
+
+  .contact-info {
+    font-size: 0.85rem;
+    gap: 0.5rem;
+  }
+
+  .section-content {
+    margin-left: 0.5rem;
+    padding-left: 1rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
