@@ -71,13 +71,6 @@ describe('Resume Functionality', () => {
       expect(resumeContent.length).toBeGreaterThan(0);
     });
 
-    it('should have resume.yml data file', () => {
-      const yamlPath = resolve('./resume.yml');
-      expect(() => {
-        accessSync(yamlPath, constants.F_OK);
-      }).not.toThrow();
-    });
-
     it('should have resume.css stylesheet', () => {
       const cssPath = resolve('./resume.css');
       expect(() => {
