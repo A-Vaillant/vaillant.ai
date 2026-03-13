@@ -1,60 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Resume — Aleister Vaillant</title>
-    <meta name="description" content="Resume for Aleister Vaillant">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="site.css">
-    <link rel="stylesheet" href="resume.css">
-  </head>
-  <body class="resume-body">
-    <div class="grid-bg" aria-hidden="true"></div>
-
-    <div class="resume-container">
-      <nav class="resume-nav">
-        <a href="index.html" id="back-link">← index</a>
-      </nav>
-
-      <header class="resume-header">
-        <h1 class="resume-name" id="resume-name">Loading...</h1>
-        <div class="resume-contact">
-          <a id="resume-email" href="mailto:"></a>
-          <span id="resume-location"></span>
-          <a id="resume-github" href="" target="_blank">GitHub</a>
-          <a id="resume-linkedin" href="" target="_blank">LinkedIn</a>
-        </div>
-      </header>
-
-      <section id="summary" class="section">
-        <p class="summary-text"></p>
-      </section>
-
-      <section id="experience" class="section">
-        <h2 class="section-label">Experience</h2>
-        <div class="section-body"></div>
-      </section>
-
-      <section id="education" class="section">
-        <h2 class="section-label">Education</h2>
-        <div class="section-body"></div>
-      </section>
-
-      <section id="projects" class="section">
-        <h2 class="section-label">Projects</h2>
-        <div class="section-body"></div>
-      </section>
-
-      <section id="skills" class="section">
-        <h2 class="section-label">Skills</h2>
-        <div class="section-body skills-body"></div>
-      </section>
-    </div>
-
-    <script type="application/json" id="resume-data">
 {
   "basics": {
     "name": "Aleister Vaillant",
@@ -170,44 +113,19 @@
   "skills": [
     {
       "name": "Languages",
-      "keywords": [
-        "Python",
-        "SQL",
-        "Bash",
-        "C++"
-      ]
+      "keywords": ["Python", "SQL", "Bash", "C++"]
     },
     {
       "name": "ML/CV",
-      "keywords": [
-        "PyTorch",
-        "TensorFlow",
-        "YOLO/Ultralytics",
-        "OpenCV",
-        "Edge Deployment",
-        "Synthetic Data Generation"
-      ]
+      "keywords": ["PyTorch", "TensorFlow", "YOLO/Ultralytics", "OpenCV", "Edge Deployment", "Synthetic Data Generation"]
     },
     {
       "name": "LLM Integration",
-      "keywords": [
-        "Anthropic API",
-        "DSPy",
-        "Pydantic",
-        "Structured Outputs",
-        "State Machine Architectures"
-      ]
+      "keywords": ["Anthropic API", "DSPy", "Pydantic", "Structured Outputs", "State Machine Architectures"]
     },
     {
       "name": "Infrastructure",
-      "keywords": [
-        "Linux/FreeBSD",
-        "Raspberry Pi",
-        "Arduino",
-        "AWS",
-        "GCP",
-        "ETL"
-      ]
+      "keywords": ["Linux/FreeBSD", "Raspberry Pi", "Arduino", "AWS", "GCP", "ETL"]
     }
   ],
   "projects": [
@@ -218,50 +136,26 @@
         "1200+ tests, 439 commits, single self-contained HTML file",
         "Coordinate algebra guaranteeing player's book is within navigable space by construction"
       ],
-      "keywords": [
-        "TypeScript",
-        "Procedural Generation",
-        "ECS",
-        "Roguelike"
-      ],
+      "keywords": ["TypeScript", "Procedural Generation", "ECS", "Roguelike"],
       "url": "https://github.com/A-Vaillant/a-long-day-in-hell"
     },
     {
       "name": "Paranoia Agent",
       "description": "Adversarial code reviewer implementing Verification-Driven Development. Reviews with escalating hostility until forced to hallucinate problems — that's the exit condition.",
-      "keywords": [
-        "Python",
-        "LLM Integration",
-        "CLI",
-        "Code Quality"
-      ],
+      "keywords": ["Python", "LLM Integration", "CLI", "Code Quality"],
       "url": "https://github.com/A-Vaillant/paranoia-agent"
     },
     {
       "name": "Factorio Working Group",
       "description": "First-author research applying Path of Destruction to factory layout generation. 21-channel binary matrix representation; best model achieved 99.82% validation accuracy.",
-      "keywords": [
-        "PyTorch",
-        "CNNs",
-        "Procedural Generation",
-        "Research"
-      ],
+      "keywords": ["PyTorch", "CNNs", "Procedural Generation", "Research"],
       "url": "https://github.com/A-Vaillant/factorio-working-group"
     },
     {
       "name": "Petrock",
       "description": "Multimodal AI on Raspberry Pi: real-time CV inference with LLM-driven personality on edge hardware.",
-      "keywords": [
-        "Computer Vision",
-        "LLM",
-        "Raspberry Pi",
-        "Edge AI"
-      ],
+      "keywords": ["Computer Vision", "LLM", "Raspberry Pi", "Edge AI"],
       "url": "https://github.com/A-Vaillant/petrock"
     }
   ]
 }
-    </script>
-    <script src="resume.js"></script>
-  </body>
-</html>

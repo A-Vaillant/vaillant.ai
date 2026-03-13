@@ -6,7 +6,6 @@ describe('Resume Functionality', () => {
   let htmlContent;
 
   beforeEach(() => {
-    // Read the actual HTML file
     htmlContent = readFileSync(resolve('./index.html'), 'utf-8');
     document.body.innerHTML = htmlContent;
   });
@@ -37,11 +36,6 @@ describe('Resume Functionality', () => {
     it('should have visible text content', () => {
       const resumeLink = document.querySelector('#resume-link');
       expect(resumeLink?.textContent?.trim()).toBe('Resume');
-    });
-
-    it('should be wrapped in h2 tag like other links', () => {
-      const resumeLink = document.querySelector('#resume-link');
-      expect(resumeLink?.parentElement?.tagName).toBe('H2');
     });
   });
 
@@ -100,8 +94,8 @@ describe('Resume Functionality', () => {
     });
 
     it('should maintain proper order: LinkedIn, GitHub, Resume', () => {
-      const h2Links = Array.from(document.querySelectorAll('#central > h2 > a'));
-      const hrefs = h2Links.map(link => link.getAttribute('href'));
+      const navLinks = Array.from(document.querySelectorAll('nav.links .link'));
+      const hrefs = navLinks.map(link => link.getAttribute('href'));
 
       const linkedinIndex = hrefs.findIndex(href => href?.includes('linkedin'));
       const githubIndex = hrefs.findIndex(href => href?.includes('github'));
@@ -113,19 +107,9 @@ describe('Resume Functionality', () => {
     });
 
     it('should have email link before social links', () => {
-      const emailLink = document.querySelector('a.subtitle[href^="mailto:"]');
+      const emailLink = document.querySelector('a[href^="mailto:"]');
       expect(emailLink).toBeTruthy();
       expect(emailLink?.textContent).toMatch(/@vaillant\.ai/);
-    });
-
-    it('should preserve the CRT container structure', () => {
-      const crt = document.querySelector('.crt');
-      const curvedScreen = document.querySelector('#curved-screen');
-      const central = document.querySelector('#central');
-
-      expect(crt).toBeTruthy();
-      expect(curvedScreen).toBeTruthy();
-      expect(central).toBeTruthy();
     });
   });
 
@@ -140,14 +124,10 @@ describe('Resume Functionality', () => {
       expect(meta?.getAttribute('content')).toContain('width=device-width');
     });
 
-    it('should load portfolio.css stylesheet', () => {
-      const link = document.querySelector('link[href="portfolio.css"]');
+    it('should load site.css stylesheet', () => {
+      const link = document.querySelector('link[href="site.css"]');
       expect(link).toBeTruthy();
       expect(link?.getAttribute('rel')).toBe('stylesheet');
-    });
-
-    it('should load ostrich.js script', () => {
-      expect(htmlContent).toContain('ostrich.js');
     });
   });
 
@@ -162,10 +142,7 @@ describe('Resume Functionality', () => {
 
     it('should use semantic HTML with proper heading structure', () => {
       const h1 = document.querySelector('h1#name');
-      const h2s = document.querySelectorAll('h2');
-
       expect(h1).toBeTruthy();
-      expect(h2s.length).toBeGreaterThan(0);
     });
 
     it('resume link should be keyboard accessible (is a proper <a> tag)', () => {
@@ -177,7 +154,6 @@ describe('Resume Functionality', () => {
 
   describe('Error Handling', () => {
     it('should fail fast if resume.html is missing', () => {
-      // This test documents expected behavior - CI should fail if file missing
       const resumePath = resolve('./resume.html');
       let fileExists = false;
 
@@ -189,7 +165,7 @@ describe('Resume Functionality', () => {
       }
 
       if (!fileExists) {
-        throw new Error('❌ CRITICAL: resume.html is missing! This should fail CI.');
+        throw new Error('CRITICAL: resume.html is missing! This should fail CI.');
       }
 
       expect(fileExists).toBe(true);
@@ -199,7 +175,7 @@ describe('Resume Functionality', () => {
       const resumeLink = document.querySelector('a[href="resume.html"]');
 
       if (!resumeLink) {
-        throw new Error('❌ CRITICAL: Resume link missing from index.html! This should fail CI.');
+        throw new Error('CRITICAL: Resume link missing from index.html! This should fail CI.');
       }
 
       expect(resumeLink).toBeTruthy();

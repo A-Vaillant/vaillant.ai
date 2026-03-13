@@ -1,27 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8">
     <title>vaillant.ai</title>
     <meta name="description" content="If you're looking for A. Vaillant's website, this is it. You've found it - it's simply a matter of clicking the link.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="portfolio.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="site.css">
   </head>
   <body>
-    <div class="crt">
-      <div class="scan-line"></div>
-      <div class="scan-line" style="animation-delay: -2s;"></div>
-      <div class="scan-line" style="animation-delay: -4s;"></div>
-      <div id="curved-screen">
-        <div id="central">
-          <h1 id="name">Aleister Vaillant</h1>
-          <a class="subtitle" href="mailto:aleister@vaillant.ai">aleister@vaillant.ai</a>
-          <h2><a href="https://www.linkedin.com/in/alvaillant/">LinkedIn</a></h2>
-          <h2><a href="https://github.com/A-Vaillant">GitHub</a></h2>
-          <h2><a href="resume.html" id="resume-link">Resume</a></h2>
-        </div>
-      </div>
-    </div>
+    <div class="grid-bg" aria-hidden="true"></div>
+    <div class="drift" aria-hidden="true"></div>
 
-  <script src="ostrich.js"></script>
+    <main>
+      <header class="ident">
+        <h1 class="name" id="name">ALEISTER<br>VAILLANT</h1>
+        <div class="label">ML Engineer — New York</div>
+      </header>
+
+      <nav class="links">
+        <a href="mailto:aleister@vaillant.ai" class="link" id="email-link">aleister@vaillant.ai</a>
+        <a href="https://www.linkedin.com/in/alvaillant/" class="link">LinkedIn</a>
+        <a href="https://github.com/A-Vaillant" class="link">GitHub</a>
+        <a href="resume.html" class="link" id="resume-link">Resume</a>
+      </nav>
+    </main>
+
+    <script>
+      const p = new URLSearchParams(location.search);
+      const c = p.get('a');
+      if (c && parseInt(c) === 2) {
+        const n = document.getElementById('name');
+        const e = document.getElementById('email-link');
+        const r = document.getElementById('resume-link');
+        n.innerHTML = String.fromCharCode(65,76,73,67,69) + '<br>' + String.fromCharCode(86,65,73,76,76,65,78,84);
+        const em = String.fromCharCode(97,108,105,99,101,64,118,97,105,108,108,97,110,116,46,97,105);
+        e.textContent = em;
+        e.href = 'mailto:' + em;
+        if (r) r.href = 'resume.html?a=' + c;
+      }
+    </script>
   </body>
 </html>
