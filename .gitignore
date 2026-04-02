@@ -3,3 +3,5 @@ coverage/
 .vitest/
 *.log
 .DS_Store
+.superpowers/
+_site/
