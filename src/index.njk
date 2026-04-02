@@ -10,5 +10,21 @@ description: "If you're looking for A. Vaillant's website, this is it."
     <h1 class="name" id="name" data-name>ALEISTER<br>VAILLANT</h1>
     <div class="label">ML Engineer — New York</div>
   </header>
+
+  <nav class="projects" aria-label="Projects">
+    {%- for project in collections.project | sort(false, false, 'data.order') %}
+    <a href="{{ project.url }}" class="project-card">
+      <span class="project-card-title">{{ project.data.title }}</span>
+      <span class="project-card-subtitle">{{ project.data.subtitle }}</span>
+    </a>
+    {%- endfor %}
+  </nav>
+
+  <nav class="meta-links" aria-label="Contact and profiles">
+    <a href="/resume.html">Resume</a>
+    <a href="https://github.com/A-Vaillant">GitHub</a>
+    <a href="https://www.linkedin.com/in/alvaillant/">LinkedIn</a>
+    <a href="mailto:aleister@vaillant.ai" data-email>aleister@vaillant.ai</a>
+  </nav>
 </main>
 {% endblock %}
