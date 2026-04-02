@@ -59,3 +59,24 @@ describe('Project Pages', () => {
     expect(() => accessSync(resolve('./_site/css/project.css'), constants.F_OK)).not.toThrow();
   });
 });
+
+describe('Mermaid Rendering', () => {
+  it('should not have unrendered mermaid code blocks in output', () => {
+    for (const slug of projectSlugs) {
+      const html = readFileSync(resolve(`./_site/projects/${slug}/index.html`), 'utf-8');
+      expect(html).not.toContain('class="language-mermaid"');
+    }
+  });
+
+  it('should have rendered SVG elements in project pages with mermaid diagrams', () => {
+    let foundSvg = false;
+    for (const slug of projectSlugs) {
+      const html = readFileSync(resolve(`./_site/projects/${slug}/index.html`), 'utf-8');
+      if (html.includes('<svg')) {
+        foundSvg = true;
+        break;
+      }
+    }
+    expect(foundSvg).toBe(true);
+  });
+});
