@@ -1,0 +1,55 @@
+{% extends "base.njk" %}
+
+{% set bodyClass = "resume-body" %}
+{% set noDrift = true %}
+
+{% block head %}
+<link rel="stylesheet" href="/css/resume.css">
+{% endblock %}
+
+{% block body %}
+<div class="resume-container">
+  <nav class="resume-nav">
+    <a href="/" id="back-link">← index</a>
+  </nav>
+
+  <header class="resume-header">
+    <h1 class="resume-name" id="resume-name" data-name>Loading...</h1>
+    <div class="resume-contact">
+      <a id="resume-email" href="mailto:" data-email></a>
+      <span id="resume-location"></span>
+      <a id="resume-github" href="" target="_blank">GitHub</a>
+      <a id="resume-linkedin" href="" target="_blank">LinkedIn</a>
+    </div>
+  </header>
+
+  <section id="summary" class="section">
+    <p class="summary-text"></p>
+  </section>
+
+  <section id="experience" class="section">
+    <h2 class="section-label">Experience</h2>
+    <div class="section-body"></div>
+  </section>
+
+  <section id="education" class="section">
+    <h2 class="section-label">Education</h2>
+    <div class="section-body"></div>
+  </section>
+
+  <section id="projects" class="section">
+    <h2 class="section-label">Projects</h2>
+    <div class="section-body"></div>
+  </section>
+
+  <section id="skills" class="section">
+    <h2 class="section-label">Skills</h2>
+    <div class="section-body skills-body"></div>
+  </section>
+</div>
+
+<script type="application/json" id="resume-data">
+{{ resume | dump(2) | safe }}
+</script>
+<script src="/js/resume.js"></script>
+{% endblock %}
