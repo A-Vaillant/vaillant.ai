@@ -1,6 +1,6 @@
 export default [
   {
-    ignores: ['_site/**', '.eleventy.js']
+    ignores: ['_site/**', '.eleventy.js', 'coverage/**']
   },
   {
     files: ['src/js/*.js'],
@@ -36,7 +36,8 @@ export default [
         expect: 'readonly',
         beforeEach: 'readonly',
         afterEach: 'readonly',
-        vi: 'readonly'
+        vi: 'readonly',
+        document: 'readonly'
       }
     },
     rules: {
