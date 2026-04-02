@@ -1,6 +1,9 @@
 export default [
   {
-    files: ['*.js'],
+    ignores: ['_site/**', '.eleventy.js']
+  },
+  {
+    files: ['src/js/*.js'],
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: 'module',
@@ -23,8 +26,10 @@ export default [
     }
   },
   {
-    files: ['*.test.js'],
+    files: ['tests/**/*.test.js'],
     languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: 'module',
       globals: {
         describe: 'readonly',
         it: 'readonly',
@@ -33,6 +38,13 @@ export default [
         afterEach: 'readonly',
         vi: 'readonly'
       }
+    },
+    rules: {
+      'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+      'no-undef': 'error',
+      'no-console': 'off',
+      'semi': ['error', 'always'],
+      'quotes': ['error', 'single', { avoidEscape: true }]
     }
   }
 ];

@@ -4,17 +4,18 @@
   "description": "Aleister/Alice Vaillant's personal portfolio site",
   "type": "module",
   "scripts": {
+    "dev": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:ui": "vitest --ui",
     "test:coverage": "vitest run --coverage",
     "lint": "eslint .",
     "validate": "npm run lint && npm run test",
-    "build:resume": "node build-resume.js",
-    "build": "npm run build:resume",
     "prepare": "husky"
   },
   "devDependencies": {
+    "@11ty/eleventy": "^3.1.5",
     "@vitest/coverage-v8": "^2.0.0",
     "@vitest/ui": "^2.0.0",
     "eslint": "^9.0.0",
