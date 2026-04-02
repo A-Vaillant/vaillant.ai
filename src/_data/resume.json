@@ -146,16 +146,15 @@
       "url": "https://github.com/A-Vaillant/paranoia-agent"
     },
     {
-      "name": "Factorio Working Group",
-      "description": "First-author research applying Path of Destruction to factory layout generation. 21-channel binary matrix representation; best model achieved 99.82% validation accuracy.",
-      "keywords": ["PyTorch", "CNNs", "Procedural Generation", "Research"],
-      "url": "https://github.com/A-Vaillant/factorio-working-group"
+      "name": "Storyverse CV Pipeline",
+      "description": "Real-time computer vision for immersive theater. YOLO object detection fine-tuned on synthetic Blender data, deployed to Raspberry Pi with Kalman filter tracking.",
+      "keywords": ["Python", "YOLO", "Computer Vision", "Edge Deployment"]
     },
     {
-      "name": "Petrock",
-      "description": "Multimodal AI on Raspberry Pi: real-time CV inference with LLM-driven personality on edge hardware.",
-      "keywords": ["Computer Vision", "LLM", "Raspberry Pi", "Edge AI"],
-      "url": "https://github.com/A-Vaillant/petrock"
+      "name": "Yapperbot",
+      "description": "Autonomous LLM journaling agent. Grammar-constrained generation via outlines-core, state machine execution loop, local model deployment.",
+      "keywords": ["Python", "LLM", "Grammar Constraints", "State Machine"],
+      "url": "https://github.com/A-Vaillant/yapperbot"
     }
   ]
 }
