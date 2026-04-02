@@ -176,4 +176,74 @@ body::after {
     padding: 0.75rem 0;
     font-size: 0.9rem;
   }
+
+  .project-card-title {
+    font-size: 0.9rem;
+  }
+
+  .project-card-subtitle {
+    font-size: 0.75rem;
+  }
+
+  .meta-links {
+    gap: 0.8rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* project cards — primary navigation */
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.project-card {
+  display: block;
+  text-decoration: none;
+  border-left: 2px solid var(--accent-dim);
+  padding-left: 0.75rem;
+  transition: border-color 0.3s, padding-left 0.3s;
+}
+
+.project-card:hover {
+  border-color: var(--accent-bright);
+  padding-left: 1rem;
+}
+
+.project-card-title {
+  display: block;
+  color: var(--accent);
+  font-size: 0.85rem;
+}
+
+.project-card:hover .project-card-title {
+  color: var(--accent-bright);
+}
+
+.project-card-subtitle {
+  display: block;
+  color: var(--accent-dim);
+  font-size: 0.7rem;
+}
+
+/* secondary links — contact, profiles */
+.meta-links {
+  border-top: 1px solid rgba(180, 199, 217, 0.06);
+  padding-top: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  font-size: 0.75rem;
+}
+
+.meta-links a {
+  color: var(--accent-dim);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.meta-links a:hover {
+  color: var(--accent-bright);
 }
