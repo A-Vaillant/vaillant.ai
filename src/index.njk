@@ -1,14 +1,14 @@
 ---
 title: vaillant.ai
+description: "If you're looking for A. Vaillant's website, this is it."
 ---
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>{{ title }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <h1>vaillant.ai</h1>
-  </body>
-</html>
+{% extends "base.njk" %}
+
+{% block body %}
+<main>
+  <header class="ident">
+    <h1 class="name" id="name" data-name>ALEISTER<br>VAILLANT</h1>
+    <div class="label">ML Engineer — New York</div>
+  </header>
+</main>
+{% endblock %}
