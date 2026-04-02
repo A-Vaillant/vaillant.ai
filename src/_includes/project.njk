@@ -1,8 +1,29 @@
 {% extends "base.njk" %}
 
+{% block head %}
+<link rel="stylesheet" href="/css/project.css">
+{% endblock %}
+
 {% block body %}
-<main class="project-page">
-  <h1>{{ title }}</h1>
-  {{ content | safe }}
-</main>
+<div class="project-container">
+  <nav class="project-nav">
+    <a href="/">← index</a>
+  </nav>
+
+  <header class="project-header">
+    <h1 class="project-title">{{ title }}</h1>
+    <div class="project-subtitle">{{ subtitle }}</div>
+  </header>
+
+  <article class="project-body">
+    {{ content | safe }}
+  </article>
+
+  {% if repo or demo %}
+  <footer class="project-footer">
+    {% if repo %}<a href="{{ repo }}" target="_blank" rel="noopener">GitHub →</a>{% endif %}
+    {% if demo %}<a href="{{ demo }}" target="_blank" rel="noopener">Live Demo →</a>{% endif %}
+  </footer>
+  {% endif %}
+</div>
 {% endblock %}
