@@ -1,0 +1,179 @@
+:root {
+  --accent: #b4c7d9;
+  --accent-bright: #dce8f0;
+  --accent-dim: #5a7080;
+  --bg: #08090b;
+  --bg-elevated: #0e1014;
+  --text: #8a9199;
+  --text-bright: #c4cdd4;
+  --grid-color: rgba(180, 199, 217, 0.03);
+  --grid-accent: rgba(180, 199, 217, 0.06);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* structural grid — the megastructure's skeleton */
+.grid-bg {
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(var(--grid-accent) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-accent) 1px, transparent 1px);
+  background-size:
+    60px 60px,
+    60px 60px,
+    300px 300px,
+    300px 300px;
+  z-index: 0;
+}
+
+/* slow atmospheric drift — fluorescent corridor hum */
+.drift {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 80% 50% at 50% 40%,
+    rgba(180, 199, 217, 0.02) 0%,
+    transparent 70%
+  );
+  animation: drift 20s ease-in-out infinite alternate;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes drift {
+  0% { opacity: 0.4; transform: translateY(-2%) scale(1.02); }
+  100% { opacity: 1; transform: translateY(2%) scale(0.98); }
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  max-width: 600px;
+  width: 100%;
+}
+
+/* identity block — carved into infrastructure */
+.ident {
+  margin-bottom: 4rem;
+}
+
+.name {
+  font-size: clamp(3rem, 10vw, 6rem);
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  line-height: 0.9;
+  color: var(--accent-bright);
+  position: relative;
+}
+
+.name::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--accent-dim);
+  margin-top: 1.5rem;
+}
+
+.label {
+  margin-top: 2rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent-dim);
+}
+
+/* navigation — sparse, deliberate */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.link {
+  display: block;
+  padding: 0.6rem 0;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(180, 199, 217, 0.06);
+  transition: color 0.3s, padding-left 0.3s;
+}
+
+.link:first-child {
+  border-top: 1px solid rgba(180, 199, 217, 0.06);
+}
+
+.link:hover {
+  color: var(--accent-bright);
+  padding-left: 0.75rem;
+}
+
+/* vignette — depth at the edges */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 40%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 15px;
+  }
+
+  body {
+    align-items: flex-start;
+    padding-top: 12vh;
+  }
+
+  main {
+    padding: 1.5rem;
+  }
+
+  .name {
+    font-size: clamp(2.2rem, 12vw, 3.5rem);
+  }
+
+  .ident {
+    margin-bottom: 2.5rem;
+  }
+
+  .link {
+    padding: 0.75rem 0;
+    font-size: 0.9rem;
+  }
+}
