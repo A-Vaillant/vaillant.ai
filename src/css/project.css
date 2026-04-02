@@ -1,0 +1,170 @@
+/* project pages — long-form reading */
+
+.project-container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 4rem 2rem 6rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* suppress vignette for scrollable pages */
+body:has(.project-container)::after {
+  display: none;
+}
+
+body:has(.project-container) {
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto;
+  align-items: initial;
+  justify-content: initial;
+}
+
+/* nav */
+.project-nav {
+  margin-bottom: 4rem;
+}
+
+.project-nav a {
+  color: var(--accent-dim);
+  text-decoration: none;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  transition: color 0.3s;
+}
+
+.project-nav a:hover {
+  color: var(--accent-bright);
+}
+
+/* header */
+.project-header {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(180, 199, 217, 0.1);
+}
+
+.project-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  color: var(--accent-bright);
+  line-height: 1.1;
+  margin-bottom: 0.75rem;
+}
+
+.project-subtitle {
+  font-size: 0.8rem;
+  color: var(--accent-dim);
+  letter-spacing: 0.03em;
+}
+
+/* body content */
+.project-body h2 {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--accent-dim);
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(180, 199, 217, 0.08);
+}
+
+.project-body p {
+  font-size: 0.85rem;
+  color: var(--text);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.project-body ul,
+.project-body ol {
+  padding-left: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.project-body li {
+  font-size: 0.85rem;
+  color: var(--text);
+  line-height: 1.7;
+  margin-bottom: 0.3rem;
+}
+
+.project-body code {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.8rem;
+  color: var(--accent);
+  background: var(--bg-elevated);
+  padding: 0.1rem 0.3rem;
+  border: 1px solid rgba(180, 199, 217, 0.08);
+}
+
+.project-body pre {
+  background: var(--bg-elevated);
+  border: 1px solid rgba(180, 199, 217, 0.08);
+  padding: 1rem;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+}
+
+.project-body pre code {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* mermaid SVG diagrams */
+.project-body svg {
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem 0;
+}
+
+/* footer links */
+.project-footer {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(180, 199, 217, 0.08);
+  display: flex;
+  gap: 1.5rem;
+}
+
+.project-footer a {
+  color: var(--accent-dim);
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  transition: color 0.3s;
+}
+
+.project-footer a:hover {
+  color: var(--accent-bright);
+}
+
+@media (max-width: 600px) {
+  .project-container {
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  .project-nav {
+    margin-bottom: 2rem;
+  }
+
+  .project-nav a {
+    font-size: 0.85rem;
+    padding: 0.5rem 0;
+    display: inline-block;
+  }
+
+  .project-title {
+    font-size: 1.6rem;
+  }
+
+  .project-body p,
+  .project-body li {
+    font-size: 0.9rem;
+  }
+}
