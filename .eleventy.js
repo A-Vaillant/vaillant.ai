@@ -4,6 +4,14 @@ import { join } from 'path';
 import { tmpdir } from 'os';
 
 export default function(eleventyConfig) {
+  // Exclude drafts from output
+  eleventyConfig.addGlobalData('eleventyComputed', {
+    permalink: (data) => {
+      if (data.draft) return false;
+      return data.permalink;
+    }
+  });
+
   eleventyConfig.addPassthroughCopy({ 'public': '.' });
   eleventyConfig.addPassthroughCopy('src/css');
   eleventyConfig.addPassthroughCopy('src/js');

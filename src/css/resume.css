@@ -34,6 +34,10 @@
   transition: color 0.3s;
 }
 
+.resume-nav a:visited {
+  color: var(--accent-dim);
+}
+
 .resume-nav a:hover {
   color: var(--accent-bright);
 }
@@ -67,6 +71,10 @@
   color: var(--accent-dim);
   text-decoration: none;
   transition: color 0.3s;
+}
+
+.resume-contact a:visited {
+  color: var(--accent-dim);
 }
 
 .resume-contact a:hover {
@@ -178,6 +186,10 @@
   color: inherit;
   text-decoration: none;
   transition: color 0.3s;
+}
+
+.project-name a:visited {
+  color: var(--text-bright);
 }
 
 .project-name a:hover {

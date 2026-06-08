@@ -4,6 +4,7 @@ subtitle: "Adversarial code reviewer with convergence scoring"
 repo: "https://github.com/A-Vaillant/paranoia-agent"
 demo: null
 order: 3
+draft: true
 ---
 
 ## What it is

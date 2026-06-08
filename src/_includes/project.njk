@@ -13,16 +13,17 @@
   <header class="project-header">
     <h1 class="project-title">{{ title }}</h1>
     <div class="project-subtitle">{{ subtitle }}</div>
+    {% if demo %}<a href="{{ demo }}" class="project-demo-link" target="_blank" rel="noopener">Live demo →</a>{% endif %}
   </header>
 
   <article class="project-body">
     {{ content | safe }}
   </article>
 
-  {% if repo or demo %}
+  {% if repo or repos %}
   <footer class="project-footer">
     {% if repo %}<a href="{{ repo }}" target="_blank" rel="noopener">GitHub →</a>{% endif %}
-    {% if demo %}<a href="{{ demo }}" target="_blank" rel="noopener">Live Demo →</a>{% endif %}
+    {% if repos %}{% for r in repos %}<a href="{{ r.url }}" target="_blank" rel="noopener">{{ r.label }} →</a>{% endfor %}{% endif %}
   </footer>
   {% endif %}
 </div>
