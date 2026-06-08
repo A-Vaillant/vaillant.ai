@@ -18,7 +18,7 @@ A computer-vision system for *Fairyland*, an immersive theater production by [St
 
 Because this is an immersive theater experience, the system had to run continuously and accuracy for about 3 hours. Network stuff is inherently a little bit cursed, so that left edge ML on the table. I targeted the Raspberry Pi 4 because I've used those before, I had them on hand, and I already knew how to set up a quantized bounding box detection model on that hardware.
 
-I didn't actually check if there was already a dataset of people wearing Zener-inspired designs on badges already in existence but I assumed there was not. As such, one needed to be created.
+I didn't actually check if there was already a dataset of people wearing [Zener](https://en.wikipedia.org/wiki/Zener_cards)-inspired designs on badges already in existence but I assumed there was not. As such, one needed to be created.
 
 ## How it works
 

@@ -2,7 +2,7 @@
   "basics": {
     "name": "Aleister Vaillant",
     "label": "ML/CV Engineer",
-    "email": "aleister@vaillant.ai",
+    "email": "a@vaillant.ai",
     "summary": "Six years of noticing that a specific tool was missing and building it. CV model trained locally and deployed to a Raspberry Pi. Asset tracking for 10,000+ hardware units. Autonomous vehicle fault triage.",
     "location": {
       "city": "New York",
