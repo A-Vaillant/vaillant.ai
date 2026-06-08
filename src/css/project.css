@@ -21,6 +21,10 @@ body:has(.project-container) {
   justify-content: initial;
 }
 
+body:has(.project-container) .grid-bg {
+  opacity: 0.5;
+}
+
 /* nav */
 .project-nav {
   margin-bottom: 4rem;
@@ -34,6 +38,10 @@ body:has(.project-container) {
   transition: color 0.3s;
 }
 
+.project-nav a:visited {
+  color: var(--accent-dim);
+}
+
 .project-nav a:hover {
   color: var(--accent-bright);
 }
@@ -41,8 +49,6 @@ body:has(.project-container) {
 /* header */
 .project-header {
   margin-bottom: 3rem;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid rgba(180, 199, 217, 0.1);
 }
 
 .project-title {
@@ -58,6 +64,24 @@ body:has(.project-container) {
   font-size: 0.8rem;
   color: var(--accent-dim);
   letter-spacing: 0.03em;
+}
+
+.project-demo-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  transition: color 0.3s;
+}
+
+.project-demo-link:visited {
+  color: var(--accent);
+}
+
+.project-demo-link:hover {
+  color: var(--accent-bright);
 }
 
 /* body content */
@@ -138,6 +162,10 @@ body:has(.project-container) {
   font-size: 0.8rem;
   letter-spacing: 0.05em;
   transition: color 0.3s;
+}
+
+.project-footer a:visited {
+  color: var(--accent-dim);
 }
 
 .project-footer a:hover {

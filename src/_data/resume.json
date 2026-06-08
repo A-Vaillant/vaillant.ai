@@ -148,7 +148,8 @@
     {
       "name": "Storyverse CV Pipeline",
       "description": "Real-time computer vision for immersive theater. YOLO object detection fine-tuned on synthetic Blender data, deployed to Raspberry Pi with Kalman filter tracking.",
-      "keywords": ["Python", "YOLO", "Computer Vision", "Edge Deployment"]
+      "keywords": ["Python", "YOLO", "Computer Vision", "Edge Deployment"],
+      "url": "https://github.com/A-Vaillant/badge-vision-model"
     },
     {
       "name": "Yapperbot",

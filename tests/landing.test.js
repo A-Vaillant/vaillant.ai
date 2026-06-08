@@ -22,25 +22,23 @@ describe('Landing Page', () => {
     expect(h1.hasAttribute('data-name')).toBe(true);
   });
 
-  it('should have 4 project cards', () => {
+  it('should have 2 project cards', () => {
     const cards = document.querySelectorAll('.project-card');
-    expect(cards.length).toBe(4);
+    expect(cards.length).toBe(2);
   });
 
   it('should display project cards in order', () => {
     const titles = Array.from(document.querySelectorAll('.project-card-title'))
       .map(el => el.textContent.trim());
     expect(titles).toEqual([
-      'Storyverse CV Pipeline',
-      'A Long Day in Hell',
-      'Paranoia Agent',
-      'Yapperbot'
+      'Eyes of Maia',
+      'A Long Day in Hell'
     ]);
   });
 
   it('should have subtitles on each card', () => {
     const subtitles = document.querySelectorAll('.project-card-subtitle');
-    expect(subtitles.length).toBe(4);
+    expect(subtitles.length).toBe(2);
     subtitles.forEach(sub => {
       expect(sub.textContent.trim().length).toBeGreaterThan(0);
     });
@@ -63,9 +61,7 @@ describe('Landing Page', () => {
   it('project card links should point to project pages', () => {
     const links = Array.from(document.querySelectorAll('.project-card'))
       .map(a => a.getAttribute('href'));
-    expect(links).toContain('/projects/storyverse/');
+    expect(links).toContain('/projects/eye-of-maia/');
     expect(links).toContain('/projects/7drl/');
-    expect(links).toContain('/projects/paranoia-agent/');
-    expect(links).toContain('/projects/yapperbot/');
   });
 });

@@ -4,6 +4,7 @@ subtitle: "Grammar-constrained autonomous journaling agent"
 repo: "https://github.com/A-Vaillant/yapperbot"
 demo: null
 order: 4
+draft: true
 ---
 
 ## What it is
