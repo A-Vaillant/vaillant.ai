@@ -31,7 +31,7 @@ describe('Landing Page', () => {
     const titles = Array.from(document.querySelectorAll('.project-card-title'))
       .map(el => el.textContent.trim());
     expect(titles).toEqual([
-      'Eyes of Maia',
+      'Eye of Maia',
       'A Long Day in Hell'
     ]);
   });

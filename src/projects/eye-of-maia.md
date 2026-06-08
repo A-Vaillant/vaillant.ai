@@ -1,5 +1,5 @@
 ---
-title: "Eyes of Maia"
+title: "Eye of Maia"
 subtitle: "Real-time badge detection on edge hardware for immersive theater"
 repos:
     - label: "Synthetic data generation"
