@@ -13,7 +13,7 @@ heroLabel: "AETHER // installation feed"
 
 ## In short
 
-AETHER was an immersive theater production by [Storyverse NYC](https://storyversenyc.com) that closed on June 10th. Multiple installations throughout the space were powered by Raspberry Pis. I built the infrastructure that powered them - a common build pipeline, MQTT telemetry fabric, and network. This included: a video synchronization playback server-client stack which scaled from one server/7 clients down to a Pi running both server and client, a phonebooth which reported usage, a static projector running a video on a loop, and an arcade game which reported high scores and player endings.
+AETHER was an immersive theater production by [Storyverse NYC](https://storyversenyc.com) that closed on June 10th. Multiple installations throughout the space were powered by Raspberry Pis. I built the infrastructure that powered them - a common build pipeline, MQTT telemetry fabric, and network. This included: a video synchronization playback server-client stack which scaled from one server and 7 clients down to a Pi running both server and client, a phonebooth which reported usage, a static projector running a video on a loop, and an arcade game which reported high scores and player endings.
 
 ## Variations on a theme
 
