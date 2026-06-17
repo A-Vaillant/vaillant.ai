@@ -12,7 +12,7 @@ order: 1
 
 ## In short
 
-A computer-vision system for *Fairyland*, an immersive theater production by [Storyverse NYC](https://storyversenyc.com) and a precursor to AETHER. Guest badges each had one of 7 Zener-inspired designs. Actors would direct guests to stand in front of a hidden camera, the system would recognize the badge design, and an environmental effect was triggered.
+A computer-vision system for *Fairyland*, an immersive theater production by [Storyverse NYC](https://storyversenyc.com) and a precursor to AETHER. Guest badges each had one of 7 [Zener](https://en.wikipedia.org/wiki/Zener_cards)-inspired designs. Actors would direct guests to stand in front of a hidden camera, the system would recognize the badge design, and an environmental effect was triggered.
 
 ## Challenges
 

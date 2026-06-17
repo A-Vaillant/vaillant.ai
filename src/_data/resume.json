@@ -3,7 +3,7 @@
     "name": "Aleister Vaillant",
     "label": "ML/CV Engineer",
     "email": "a@vaillant.ai",
-    "summary": "Six years of noticing that a specific tool was missing and building it. CV model trained locally and deployed to a Raspberry Pi. Asset tracking for 10,000+ hardware units. Autonomous vehicle fault triage.",
+    "summary": "Six years of noticing that a specific tool was missing and building it. CV models trained locally and deployed to Raspberry Pi; distributed Pi infrastructure for a live immersive theater production. Asset tracking for 10,000+ hardware units. Autonomous vehicle fault triage.",
     "location": {
       "city": "New York",
       "region": "NY",
@@ -32,12 +32,14 @@
       "position": "CV/ML Engineer",
       "startDate": "2025-07",
       "endDate": null,
-      "summary": "CV systems for GÖSPEL, an immersive theater production.",
+      "summary": "Computer vision and Raspberry Pi infrastructure for immersive theater productions (Fairyland, AETHER).",
       "highlights": [
-        "Wrote the CV pipeline from scratch: scripted Blender to generate synthetic training data, parallelized GPU rendering across workers, fine-tuned YOLO, added Kalman filter tracking",
-        "Quantized models to TFLite INT8 and ONNX. Runs real-time on a Raspberry Pi with Arduino output control",
-        "Benchmarking system replays venue video against a mocked state machine to compare model configurations",
-        "Early work on LLM agent architecture with RFID hardware for audience-responsive experiences"
+        "Wrote a CV pipeline from scratch: scripted Blender to generate synthetic training data with no hand-labeling, parallelized GPU rendering across workers, fine-tuned YOLO, added Kalman filter tracking",
+        "Quantized models to TFLite INT8 (~6MB). Runs real-time on a Raspberry Pi with Arduino output control; ran live across a production with no manual annotation",
+        "Built the distributed infrastructure for a full production: a fleet of Raspberry Pis (one codebase, multiple deployable variants) coordinating an interactive show over a dedicated wifi network the system runs itself (range and channel under our control, independent of venue wifi)",
+        "Distributed video-sync: a Pi 4 coordinates a swarm of Pi Zeros driving scattered CRTs, synchronized via a leader-elected show clock and wall-clock-timestamped events; shows run up to four hours",
+        "Built a show runtime where each show is a Python program (triggers, predicates, actions), evolved from an earlier declarative config format; plus an MQTT telemetry bus and an always-on flight recorder for after-the-fact diagnosis",
+        "Built a generic Raspberry Pi image-build system with a composable module pipeline: flash and boot yields a fully configured device with no manual setup"
       ]
     },
     {
@@ -140,22 +142,20 @@
       "url": "https://github.com/A-Vaillant/a-long-day-in-hell"
     },
     {
-      "name": "Paranoia Agent",
-      "description": "Adversarial code reviewer implementing Verification-Driven Development. Reviews with escalating hostility until forced to hallucinate problems — that's the exit condition.",
-      "keywords": ["Python", "LLM Integration", "CLI", "Code Quality"],
-      "url": "https://github.com/A-Vaillant/paranoia-agent"
+      "name": "AETHER — Raspberry Pi show infrastructure",
+      "description": "Distributed infrastructure for a live immersive theater production: a fleet of Raspberry Pis (one codebase, several deployable variants) running an interactive show over a dedicated wifi network the system runs itself. Drift-corrected video-sync across scattered CRTs, a show runtime where each show is a Python program, MQTT telemetry, an image-build pipeline, and a flight recorder.",
+      "highlights": [
+        "Video-sync: a Pi 4 coordinates a swarm of Pi Zeros driving scattered CRTs, synced via a leader show clock and wall-clock-timestamped events",
+        "Generic Pi image-build system with a composable module pipeline: flash and boot yields a fully configured device"
+      ],
+      "keywords": ["Python", "Distributed Systems", "Raspberry Pi", "MQTT", "Edge Deployment"],
+      "url": "https://vaillant.ai/projects/aether/"
     },
     {
-      "name": "Storyverse CV Pipeline",
-      "description": "Real-time computer vision for immersive theater. YOLO object detection fine-tuned on synthetic Blender data, deployed to Raspberry Pi with Kalman filter tracking.",
-      "keywords": ["Python", "YOLO", "Computer Vision", "Edge Deployment"],
-      "url": "https://github.com/A-Vaillant/badge-vision-model"
-    },
-    {
-      "name": "Yapperbot",
-      "description": "Autonomous LLM journaling agent. Grammar-constrained generation via outlines-core, state machine execution loop, local model deployment.",
-      "keywords": ["Python", "LLM", "Grammar Constraints", "State Machine"],
-      "url": "https://github.com/A-Vaillant/yapperbot"
+      "name": "Eye of Maia — badge detection CV",
+      "description": "Real-time computer vision for immersive theater. YOLO badge detection fine-tuned on synthetic Blender data (no hand-labeling), quantized to TFLite INT8 and deployed to a Raspberry Pi with Kalman filter tracking. Ran live across a production.",
+      "keywords": ["Python", "YOLO", "Computer Vision", "Synthetic Data", "Edge Deployment"],
+      "url": "https://vaillant.ai/projects/eye-of-maia/"
     }
   ]
 }

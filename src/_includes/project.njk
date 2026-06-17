@@ -16,6 +16,19 @@
     {% if demo %}<a href="{{ demo }}" class="project-demo-link" target="_blank" rel="noopener">Live demo →</a>{% endif %}
   </header>
 
+  {% if hero %}
+  <figure class="hero-frame">
+    {% if heroLabel %}<figcaption class="hero-label">{{ heroLabel }}</figcaption>{% endif %}
+    <video class="hero-video" src="{{ hero }}"{% if heroPoster %} poster="{{ heroPoster }}"{% endif %} autoplay muted playsinline preload="metadata"></video>
+    <button class="hero-replay" type="button" aria-label="Replay">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5V2L7 6l5 4V7a5 5 0 1 1-5 5H5a7 7 0 1 0 7-7z"/></svg>
+    </button>
+  </figure>
+  <script>
+  (function(){var f=document.currentScript.previousElementSibling,v=f.querySelector('.hero-video'),b=f.querySelector('.hero-replay');v.addEventListener('ended',function(){f.classList.add('ended');});b.addEventListener('click',function(){v.currentTime=0;v.play();f.classList.remove('ended');});})();
+  </script>
+  {% endif %}
+
   <article class="project-body">
     {{ content | safe }}
   </article>
