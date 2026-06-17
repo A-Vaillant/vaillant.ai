@@ -13,7 +13,7 @@ description: "If you're looking for A. Vaillant's website, this is it."
 
   <nav class="projects" aria-label="Projects">
     {%- for project in collections.project | sort(false, false, 'data.order') %}
-    {%- if not project.data.draft %}
+    {%- if not project.data.draft and not project.data.spoke %}
     <a href="{{ project.url }}" class="project-card">
       <span class="project-card-title">{{ project.data.title }}</span>
       <span class="project-card-subtitle">{{ project.data.subtitle }}</span>
