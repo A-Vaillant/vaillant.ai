@@ -2,7 +2,7 @@
 title: "AETHER — pi-build"
 subtitle: "A generic Raspberry Pi image customizer with a module system"
 repos:
-    - label: "This is the repo"
+    - label: "GitHub repository"
       url: "https://github.com/A-Vaillant/pi-build"
 demo: null
 order: 7

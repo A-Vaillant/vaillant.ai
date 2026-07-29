@@ -222,11 +222,13 @@ body:has(.project-container) .grid-bg {
   padding: 0;
 }
 
-/* mermaid SVG diagrams */
+/* body media */
+.project-body img,
 .project-body svg {
+  display: block;
   max-width: 100%;
   height: auto;
-  margin: 1.5rem 0;
+  margin: 1.5rem auto;
 }
 
 /* footer links */
