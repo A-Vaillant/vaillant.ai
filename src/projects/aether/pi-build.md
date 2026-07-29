@@ -2,7 +2,7 @@
 title: "AETHER — pi-build"
 subtitle: "A generic Raspberry Pi image customizer with a module system"
 repos:
-    - label: "pi-build"
+    - label: "This is the repo"
       url: "https://github.com/A-Vaillant/pi-build"
 demo: null
 order: 7
@@ -35,3 +35,5 @@ they all reported to the broker.
 I started with two kinds of Raspberry Pi image: the videosync server and client. The
 arcade required a third. A separate Pi in the phonebooth ran someone else's code and
 did not need to join this system until we later added telemetry.
+
+[← Return to AETHER](/projects/aether/)
