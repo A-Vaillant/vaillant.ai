@@ -1,19 +1,11 @@
 ---
 title: "AETHER"
 subtitle: "Raspberry Pi infrastructure for immersive theater"
-repos:
-    - label: "pi-build repository"
-      url: "https://github.com/A-Vaillant/pi-build"
-    - label: "videosync repository"
-      url: "https://github.com/A-Vaillant/videosync"
-    - label: "arcade game repository"
-      url: "https://github.com/earlier-clues/aether-game"
 demo: null
 order: 0
 hero: /media/aether-establishing.mp4
 heroPoster: /media/aether-establishing.jpg
 heroLabel: "AETHER // installation feed"
-footerStacked: true
 ---
 
 ## In short
@@ -46,6 +38,6 @@ Similarly, the show's configuration format changed over time, starting as a kind
 
 ## Deep dives
 
-- [pi-build](/projects/aether/pi-build/) — the generic Pi OS image customizer underneath everything.
-- [videosync](/projects/aether/videosync/) — distributed video playback across a swarm of Pi Zero 2 Ws.
+- [pi-build](/projects/aether/pi-build/) ([repo](https://github.com/A-Vaillant/pi-build)) — the generic Pi OS image customizer underneath everything.
+- [videosync](/projects/aether/videosync/) ([repo](https://github.com/A-Vaillant/videosync)) — distributed video playback across a swarm of Pi Zero 2 Ws.
 - [arcade](/projects/aether/arcade/) — the Raspberry Pi arcade cabinet.

@@ -1,9 +1,6 @@
 ---
 title: "AETHER — arcade"
 subtitle: "A Raspberry Pi arcade cabinet for the show"
-repos:
-    - label: "GitHub repository"
-      url: "https://github.com/earlier-clues/aether-game"
 demo: null
 order: 8
 spoke: true

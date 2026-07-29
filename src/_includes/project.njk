@@ -36,7 +36,7 @@
   </article>
 
   {% if parent or repo or repos %}
-  <footer class="project-footer{% if footerStacked %} project-footer--stacked{% endif %}">
+  <footer class="project-footer">
     {% if parent %}<a href="{{ parent.url }}">← {{ parent.label }}</a>{% endif %}
     {% if not spoke and repo %}<a href="{{ repo }}" target="_blank" rel="noopener">GitHub →</a>{% endif %}
     {% if not spoke and repos %}{% for r in repos %}<a href="{{ r.url }}" target="_blank" rel="noopener">{{ r.label }} →</a>{% endfor %}{% endif %}
