@@ -2,7 +2,7 @@
 title: "AETHER — videosync"
 subtitle: "Distributed video playback across a swarm of Raspberry Pi Zero 2 Ws"
 repos:
-    - label: "videosync"
+    - label: "GitHub repository"
       url: "https://github.com/A-Vaillant/videosync"
 demo: null
 order: 6
@@ -50,3 +50,5 @@ We went through several more limited versions of the configuration before aiming
 the most general possible one: just a straight-up Turing machine.
 
 <img src="/media/aether-videosync-dashboard.png" alt="The operator dashboard: per-Pi rows with playback position and drift, and the bindings table below" />
+
+[← Return to AETHER](/projects/aether/)
