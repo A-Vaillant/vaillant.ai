@@ -8,6 +8,12 @@ heroPoster: /media/aether-establishing.jpg
 heroLabel: "AETHER // installation feed"
 ---
 
+## Machine parts
+
+- [pi-build](/projects/aether/pi-build/) ([repo](https://github.com/A-Vaillant/pi-build)) — the generic Pi OS image customizer underneath everything.
+- [videosync](/projects/aether/videosync/) ([repo](https://github.com/A-Vaillant/videosync)) — distributed video playback across a swarm of Pi Zero 2 Ws.
+- [arcade](/projects/aether/arcade/) — the Raspberry Pi arcade cabinet.
+
 ## In short
 
 AETHER was an immersive theater production by [Storyverse NYC](https://storyversenyc.com) that closed on June 10th. Multiple installations throughout the space were powered by Raspberry Pis. I built the infrastructure that powered them - a common build pipeline, MQTT telemetry fabric, and network. This included: a video synchronization playback server-client stack which scaled from one server and 7 clients down to a Pi running both server and client, a phonebooth which reported usage, a static projector running a video on a loop, and an arcade game which reported high scores and player endings.
@@ -35,9 +41,3 @@ Each of the Pi images shared three things:
 I wasn't sure what the needs and requirements of the show would end up being so I tried to set as little in stone as possible while iterating on what I'd already built. pi-build came about because I realized that "deploy a thing to a Raspberry Pi" was something I'd have to keep doing, so I did the most flexible thing I possibly could: build a separate thing to abstract some of the process of creating a Raspberry Pi image. The payload system allowed me to later just drop in the mqtt-telemetry payload on the next image reflash. 
 
 Similarly, the show's configuration format changed over time, starting as a kind of DSL before culminating in a Python-shaped config where show configurations are kinds of programs.
-
-## Deep dives
-
-- [pi-build](/projects/aether/pi-build/) ([repo](https://github.com/A-Vaillant/pi-build)) — the generic Pi OS image customizer underneath everything.
-- [videosync](/projects/aether/videosync/) ([repo](https://github.com/A-Vaillant/videosync)) — distributed video playback across a swarm of Pi Zero 2 Ws.
-- [arcade](/projects/aether/arcade/) — the Raspberry Pi arcade cabinet.
