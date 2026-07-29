@@ -2,8 +2,10 @@
 title: "AETHER"
 subtitle: "Raspberry Pi infrastructure for immersive theater"
 repos:
-    - label: "Pi image build system"
+    - label: "pi-build repository"
       url: "https://github.com/A-Vaillant/pi-build"
+    - label: "videosync repository"
+      url: "https://github.com/A-Vaillant/videosync"
 demo: null
 order: 0
 hero: /media/aether-establishing.mp4

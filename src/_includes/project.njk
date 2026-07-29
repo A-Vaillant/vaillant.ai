@@ -14,6 +14,8 @@
     <h1 class="project-title">{{ title }}</h1>
     <div class="project-subtitle">{{ subtitle }}</div>
     {% if demo %}<a href="{{ demo }}" class="project-demo-link" target="_blank" rel="noopener">Live demo →</a>{% endif %}
+    {% if spoke and repo %}<a href="{{ repo }}" class="project-demo-link" target="_blank" rel="noopener">GitHub repository →</a>{% endif %}
+    {% if spoke and repos %}{% for r in repos %}<a href="{{ r.url }}" class="project-demo-link" target="_blank" rel="noopener">{{ r.label }} →</a>{% endfor %}{% endif %}
   </header>
 
   {% if hero %}
@@ -33,10 +35,11 @@
     {{ content | safe }}
   </article>
 
-  {% if repo or repos %}
+  {% if parent or repo or repos %}
   <footer class="project-footer">
-    {% if repo %}<a href="{{ repo }}" target="_blank" rel="noopener">GitHub →</a>{% endif %}
-    {% if repos %}{% for r in repos %}<a href="{{ r.url }}" target="_blank" rel="noopener">{{ r.label }} →</a>{% endfor %}{% endif %}
+    {% if parent %}<a href="{{ parent.url }}">← {{ parent.label }}</a>{% endif %}
+    {% if not spoke and repo %}<a href="{{ repo }}" target="_blank" rel="noopener">GitHub →</a>{% endif %}
+    {% if not spoke and repos %}{% for r in repos %}<a href="{{ r.url }}" target="_blank" rel="noopener">{{ r.label }} →</a>{% endfor %}{% endif %}
   </footer>
   {% endif %}
 </div>
