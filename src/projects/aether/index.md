@@ -6,6 +6,8 @@ repos:
       url: "https://github.com/A-Vaillant/pi-build"
     - label: "videosync repository"
       url: "https://github.com/A-Vaillant/videosync"
+    - label: "arcade game repository"
+      url: "https://github.com/earlier-clues/aether-game"
 demo: null
 order: 0
 hero: /media/aether-establishing.mp4
@@ -45,3 +47,4 @@ Similarly, the show's configuration format changed over time, starting as a kind
 
 - [pi-build](/projects/aether/pi-build/) — the generic Pi OS image customizer underneath everything.
 - [videosync](/projects/aether/videosync/) — distributed video playback across a swarm of Pi Zero 2 Ws.
+- [arcade](/projects/aether/arcade/) — the Raspberry Pi arcade cabinet.

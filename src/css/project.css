@@ -231,6 +231,11 @@ body:has(.project-container) .grid-bg {
   margin: 1.5rem auto;
 }
 
+.project-body img.project-image--portrait {
+  width: 100%;
+  max-width: 420px;
+}
+
 /* footer links */
 .project-footer {
   margin-top: 4rem;
