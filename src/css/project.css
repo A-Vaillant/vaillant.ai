@@ -231,9 +231,164 @@ body:has(.project-container) .grid-bg {
   margin: 1.5rem auto;
 }
 
-.project-body img.project-image--portrait {
+.project-photo-frame {
   width: 100%;
-  max-width: 420px;
+  margin: 2rem auto;
+  background: #000;
+  border: 1px solid var(--accent-dim);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.project-photo-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent-dim);
+  border-bottom: 1px solid var(--accent-dim);
+}
+
+.project-photo-label span:last-child {
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+}
+
+.project-photo-viewport {
+  position: relative;
+  overflow: hidden;
+}
+
+.project-photo-viewport::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  box-shadow: inset 0 0 38px 5px rgba(0, 0, 0, 0.48);
+}
+
+.project-photo-frame img {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+.project-photo-frame--arcade .project-photo-viewport {
+  aspect-ratio: 9 / 8;
+}
+
+.project-photo-frame--arcade img {
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.project-manifest-frame {
+  width: 100%;
+  margin: 2rem auto;
+  background: #000;
+  border: 1px solid var(--accent-dim);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.manifest-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: rgba(180, 199, 217, 0.15);
+}
+
+.manifest-role {
+  min-width: 0;
+  padding: 1rem;
+  background: var(--bg);
+}
+
+.manifest-role h3 {
+  margin: 0 0 0.8rem;
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent-bright);
+}
+
+.project-body .manifest-role ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.project-body .manifest-role li {
+  margin: 0;
+  padding: 0;
+  overflow-wrap: anywhere;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.68rem;
+  line-height: 1.35;
+  color: var(--text-dim);
+}
+
+.manifest-role details {
+  border-bottom: 1px solid rgba(180, 199, 217, 0.07);
+}
+
+.manifest-role summary {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.32rem 0;
+  cursor: pointer;
+  list-style: none;
+  transition: color 0.2s;
+}
+
+.manifest-role summary::-webkit-details-marker {
+  display: none;
+}
+
+.manifest-role summary::after {
+  content: "+";
+  margin-left: auto;
+  color: var(--accent-dim);
+  font-size: 0.72rem;
+}
+
+.manifest-role details[open] summary::after {
+  content: "−";
+}
+
+.manifest-role summary:hover {
+  color: var(--accent-bright);
+}
+
+.project-body .manifest-role li.manifest-module--shared summary {
+  color: var(--accent);
+}
+
+.project-body .manifest-role li.manifest-module--shared summary::before {
+  content: "◆";
+  font-size: 0.5rem;
+}
+
+.project-body .manifest-role details p {
+  margin: 0;
+  padding: 0 0 0.55rem;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.61rem;
+  line-height: 1.5;
+  color: var(--text-dim);
+}
+
+@media (max-width: 600px) {
+  .manifest-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* footer links */

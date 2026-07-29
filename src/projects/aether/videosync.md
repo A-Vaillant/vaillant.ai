@@ -52,4 +52,12 @@ program a show using things like loops and random choice within a structured sys
 We went through several more limited versions of the configuration before aiming for
 the most general possible one: just a straight-up Turing machine.
 
-<img src="/media/aether-videosync-dashboard.png" alt="The operator dashboard: per-Pi rows with playback position and drift, and the bindings table below" />
+<figure class="project-photo-frame">
+  <figcaption class="project-photo-label">
+    <span>AETHER // operator dashboard</span>
+    <span>interface capture</span>
+  </figcaption>
+  <div class="project-photo-viewport">
+    <img src="/media/aether-videosync-dashboard.png" alt="The operator dashboard: per-Pi rows with playback position and drift, and the bindings table below" />
+  </div>
+</figure>
