@@ -13,6 +13,7 @@ order: 0
 hero: /media/aether-establishing.mp4
 heroPoster: /media/aether-establishing.jpg
 heroLabel: "AETHER // installation feed"
+footerStacked: true
 ---
 
 ## In short

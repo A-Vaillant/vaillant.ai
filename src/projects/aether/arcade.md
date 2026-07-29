@@ -14,8 +14,8 @@ parent:
 
 ## In short
 
-The AETHER arcade cabinet was a Raspberry Pi 4 running a Pac-Man-style HTML5 game
-fullscreen with an X-Arcade Trooper 2 joystick. It used a pi-build image like the
+The AETHER arcade cabinet was a Raspberry Pi 4 running a fullscreen Pac-Man-style
+HTML5 game controlled with an X-Arcade Trooper 2 joystick. It used a pi-build image like the
 other Pis in the show.
 
 <img class="project-image--portrait" src="/media/aether-arcade-cabinet.jpg" alt="The arcade game's title screen on a CRT in the AETHER installation" />
