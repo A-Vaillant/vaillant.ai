@@ -7,6 +7,9 @@ repos:
 demo: null
 order: 6
 spoke: true
+parent:
+    label: "AETHER"
+    url: "/projects/aether/"
 hero: /media/aether-videosync-crts.mp4
 heroPoster: /media/aether-videosync-crts.jpg
 heroLabel: "AETHER // CRT swarm"
@@ -50,5 +53,3 @@ We went through several more limited versions of the configuration before aiming
 the most general possible one: just a straight-up Turing machine.
 
 <img src="/media/aether-videosync-dashboard.png" alt="The operator dashboard: per-Pi rows with playback position and drift, and the bindings table below" />
-
-[← Return to AETHER](/projects/aether/)

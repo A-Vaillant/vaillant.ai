@@ -7,6 +7,9 @@ repos:
 demo: null
 order: 7
 spoke: true
+parent:
+    label: "AETHER"
+    url: "/projects/aether/"
 ---
 
 ## In short
@@ -35,5 +38,3 @@ they all reported to the broker.
 I started with two kinds of Raspberry Pi image: the videosync server and client. The
 arcade required a third. A separate Pi in the phonebooth ran someone else's code and
 did not need to join this system until we later added telemetry.
-
-[← Return to AETHER](/projects/aether/)
