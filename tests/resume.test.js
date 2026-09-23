@@ -54,12 +54,10 @@ describe('Resume Page', () => {
     expect(() => accessSync(resolve('./_site/js/resume.js'), constants.F_OK)).not.toThrow();
   });
 
-  it('should have all resume sections', () => {
+  it('should show education after the summary and before experience', () => {
     document.body.innerHTML = html;
-    expect(document.querySelector('#summary')).toBeTruthy();
-    expect(document.querySelector('#experience')).toBeTruthy();
-    expect(document.querySelector('#education')).toBeTruthy();
-    expect(document.querySelector('#projects')).toBeTruthy();
-    expect(document.querySelector('#skills')).toBeTruthy();
+    expect([...document.querySelectorAll('section.section')].map(section => section.id)).toEqual([
+      'summary', 'education', 'experience', 'projects', 'skills'
+    ]);
   });
 });
