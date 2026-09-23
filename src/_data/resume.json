@@ -3,7 +3,7 @@
     "name": "Aleister Vaillant",
     "label": "ML/CV Engineer",
     "email": "a@vaillant.ai",
-    "summary": "Six years of noticing that a specific tool was missing and building it. CV models trained locally and deployed to Raspberry Pi; distributed Pi infrastructure for a live immersive theater production. Asset tracking for 10,000+ hardware units. Autonomous vehicle fault triage.",
+    "summary": "ML engineer who builds the missing machinery around intelligent systems. I’ve deployed computer vision on edge hardware and built distributed infrastructure for live theater. Currently experimenting with: long-running agent personas, conversational memory and retrieval, self-modifying harnesses, agent evaluation and observability, and System One models.",
     "location": {
       "city": "New York",
       "region": "NY",
