@@ -61,10 +61,12 @@ describe('Resume Page', () => {
     ]);
   });
 
-  it('should not publish coursework in the embedded resume data', () => {
+  it('should keep degrees on the first line and schools without repeated subjects', () => {
     document.body.innerHTML = html;
     const data = JSON.parse(document.querySelector('#resume-data').textContent);
-    expect(data.education).toHaveLength(2);
-    expect(data.education.every(entry => !Object.hasOwn(entry, 'courses'))).toBe(true);
+    expect(data.education.map(entry => entry.studyType)).toEqual([
+      'MS Machine Learning & Artificial Intelligence', 'BA Philosophy, BS Mathematics'
+    ]);
+    expect(data.education.every(entry => !Object.hasOwn(entry, 'area') && !Object.hasOwn(entry, 'courses'))).toBe(true);
   });
 });
