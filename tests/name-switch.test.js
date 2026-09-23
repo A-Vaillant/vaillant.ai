@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
+import { Window } from 'happy-dom';
 
 describe('Name Switch Module', () => {
   const scriptContent = readFileSync(resolve('./src/js/name-switch.js'), 'utf-8');
@@ -27,6 +28,19 @@ describe('Name Switch Module', () => {
 
   it('should target data-email attributes', () => {
     expect(scriptContent).toContain('data-email');
+  });
+
+  it('preserves title case on the resume and uppercase on the index', () => {
+    for (const [markup, expected] of [
+      ['<h1 data-name>Aleister Vaillant</h1>', 'Alice Vaillant'],
+      ['<h1 data-name>ALEISTER<br>VAILLANT</h1>', 'ALICEVAILLANT']
+    ]) {
+      const window = new Window({ url: 'https://vaillant.ai/resume.html?a=2' });
+      window.document.body.innerHTML = markup;
+      window.eval(scriptContent);
+      expect(window.document.querySelector('[data-name]').textContent).toBe(expected);
+      window.close();
+    }
   });
 });
 

@@ -4,7 +4,7 @@
   if (!cfg || parseInt(cfg) !== 2) return;
 
   // Alternate name via charcode — no plaintext in source
-  var altFirst = String.fromCharCode(65, 76, 73, 67, 69);
+  var altFirst = String.fromCharCode(65, 108, 105, 99, 101);
   var altEmail = String.fromCharCode(
     97, 108, 105, 99, 101, 64, 118, 97, 105, 108, 108, 97, 110, 116, 46, 97, 105
   );
