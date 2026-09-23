@@ -59,7 +59,7 @@ function renderResume(data) {
     eduBody.innerHTML = data.education.map(e => `
       <div class="item">
         <div class="item-role">${e.studyType}</div>
-        <div class="item-org">${e.institution} — ${e.area}</div>
+        <div class="item-org">${e.institution}</div>
         <div class="item-date">${e.startDate} — ${e.endDate}${e.gpa ? ` · GPA ${e.gpa}` : ''}</div>
       </div>
     `).join('');

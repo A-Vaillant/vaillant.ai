@@ -82,15 +82,13 @@
   "education": [
     {
       "institution": "NYU Tandon School of Engineering",
-      "area": "Machine Learning & Artificial Intelligence",
-      "studyType": "Master of Science",
+      "studyType": "MS Machine Learning & Artificial Intelligence",
       "startDate": "2023",
       "endDate": "2025",
       "gpa": "3.80"
     },
     {
       "institution": "UC Santa Barbara",
-      "area": "Philosophy & Mathematics",
       "studyType": "BA Philosophy, BS Mathematics",
       "startDate": "2010",
       "endDate": "2014",
