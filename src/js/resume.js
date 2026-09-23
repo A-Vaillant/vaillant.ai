@@ -61,9 +61,6 @@ function renderResume(data) {
         <div class="item-role">${e.studyType}</div>
         <div class="item-org">${e.institution} — ${e.area}</div>
         <div class="item-date">${e.startDate} — ${e.endDate}${e.gpa ? ` · GPA ${e.gpa}` : ''}</div>
-        ${e.courses?.length ? `
-          <div class="item-courses">${e.courses.join(' · ')}</div>
-        ` : ''}
       </div>
     `).join('');
   }

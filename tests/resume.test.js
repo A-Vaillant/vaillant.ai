@@ -60,4 +60,11 @@ describe('Resume Page', () => {
       'summary', 'education', 'experience', 'projects', 'skills'
     ]);
   });
+
+  it('should not publish coursework in the embedded resume data', () => {
+    document.body.innerHTML = html;
+    const data = JSON.parse(document.querySelector('#resume-data').textContent);
+    expect(data.education).toHaveLength(2);
+    expect(data.education.every(entry => !Object.hasOwn(entry, 'courses'))).toBe(true);
+  });
 });

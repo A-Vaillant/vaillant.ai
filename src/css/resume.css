@@ -161,12 +161,6 @@
   color: var(--accent-dim);
 }
 
-.item-courses {
-  margin-top: 0.5rem;
-  font-size: 0.75rem;
-  color: var(--accent-dim);
-}
-
 /* projects */
 .project {
   margin-bottom: 2rem;

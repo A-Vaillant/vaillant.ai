@@ -86,14 +86,7 @@
       "studyType": "Master of Science",
       "startDate": "2023",
       "endDate": "2025",
-      "gpa": "3.80",
-      "courses": [
-        "Deep Learning",
-        "Machine Learning",
-        "Reinforcement Learning",
-        "AI for Games",
-        "Digital Forensics & Networking"
-      ]
+      "gpa": "3.80"
     },
     {
       "institution": "UC Santa Barbara",
@@ -101,15 +94,7 @@
       "studyType": "BA Philosophy, BS Mathematics",
       "startDate": "2010",
       "endDate": "2014",
-      "gpa": "3.5",
-      "courses": [
-        "Abstract Algebra",
-        "Topology",
-        "Graph Theory",
-        "Combinatorics",
-        "Four-course Logic sequence",
-        "Philosophy of Mathematics"
-      ]
+      "gpa": "3.5"
     }
   ],
   "skills": [
